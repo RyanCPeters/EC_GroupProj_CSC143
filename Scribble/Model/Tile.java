@@ -1,5 +1,8 @@
 package Scribble.Model;
 
+import javax.swing.*;
+import java.awt.*;
+
 /** I think we should initially define this basic tile object as an abstract class then define 26 unique subclasses.
  * One for each letter of the english alphabet.
  *
@@ -12,6 +15,22 @@ package Scribble.Model;
 public class Tile {
 	private char letter;
 	private int value;
+	private FontMetrics fm;
+	private JLabel ltrLabl;
+	private JLabel valLabl;
+
+	public Tile() {
+		this.letter = '~';
+		this.value = '!';
+		ltrLabl = new JLabel(String.valueOf(letter));
+		valLabl = new JLabel(String.valueOf(value));
+	}
+
+	public Tile(char letter, int value) {
+		this();
+		this.letter = letter;
+		this.value = value;
+	}
 }
 /* tile distribution cheat sheet.
 * letter    pts   count

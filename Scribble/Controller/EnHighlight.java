@@ -5,5 +5,5 @@ package Scribble.Controller;
  * @author Ryan Peters
  * @date 2/12/2017
  */
-public enum FlagHighlight {
+public enum EnHighlight {
 }

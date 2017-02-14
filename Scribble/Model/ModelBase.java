@@ -23,8 +23,16 @@ public abstract class ModelBase {
 		* than this initial stubb configuration.
 		*               ----THIS IS STRICTLY FOR TESTING PURPOSES----
 		 */
-		int[] letters = {9, 2, 2, 4, 12, 2, 3, 2, 9, 1, 1, 4, 2, 6, 8, 2, 1, 6, 4, 6, 4, 2, 2, 1, 2, 1, 2};
+		char[] lettersChar = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '?'};
+		int[] lettersCounts = {9, 2, 2, 4, 12, 2, 3, 2, 9, 1, 1, 4, 2, 6, 8, 2, 1, 6, 4, 6, 4, 2, 2, 1, 2, 1, 2};
+		int[] lettersValue = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10, 0};
+		int bagIdx = 0;
+		for (int idx = 0; idx < 27; idx++) {
 
+			for (int countLetters = 0; countLetters < lettersCounts[idx]; countLetters++) {
+				tileBag[bagIdx] = new Space();
+			}
+		}
 	}
 
 	public ModelBase(Space[][] boardSpaces, Player[] playas, Space[] tileBag, Space[] activeTileTray) {
@@ -140,7 +148,9 @@ public abstract class ModelBase {
 * Z         10      1
 * ?(BLANK)  0       2
 *
-*
+*char[] lettersChar =  {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','?'};
+*int[] lettersCounts = {9, 2, 2, 4, 12, 2, 3, 2, 9, 1, 1, 4, 2, 6, 8, 2,  1, 6, 4, 6, 4, 2, 2, 1, 2,  1, 2};
+*int[] lettersValue =  {1, 3, 3, 2,  1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10, 0};
 *
 *
 */
