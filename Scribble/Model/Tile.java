@@ -1,4 +1,4 @@
-package Model;
+package Scribble.Model;
 
 /** I think we should initially define this basic tile object as an abstract class then define 26 unique subclasses.
  * One for each letter of the english alphabet.

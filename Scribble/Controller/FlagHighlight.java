@@ -1,4 +1,4 @@
-package View;
+package Scribble.Controller;
 
 /** This enum is just an example of how we might use a public constant enum to flag our board's spaces as highlighted
  * when the user is selecting where to place a word on the board.

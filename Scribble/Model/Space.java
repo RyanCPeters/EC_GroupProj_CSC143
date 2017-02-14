@@ -1,4 +1,4 @@
-package Model;
+package Scribble.Model;
 
 /**The space objects are where we describe the means to access and set the state of each tile space on the board.
  * @author Ryan Peters

@@ -1,4 +1,4 @@
-package View;
+package Scribble.View;
 
 /** This will extend the content pane or the scene, depending upon what library we decide to use in building the UI.
  * @author Ryan Peters
