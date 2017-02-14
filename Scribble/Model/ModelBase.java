@@ -11,9 +11,22 @@ public abstract class ModelBase {
 	Space[] tileBag; // this array will be populated by the controller but it should be instantiated by ModelBase.
 	Space[] activeTileTray; // a shallow clone of the acting player's tile tray.
 
-	public ModelBase() {// we can use the empty contstructor to set up a stubb-version of the model.
+
+	/**This empty contstructor is a conventient way to instantiate a basic stubb model for testing.
+	 *
+	 */
+	public ModelBase(){
+		this(0);
+	}
+
+	/**we can use the empty contstructor to set up a stubb-version of the model.
+	 *
+	 * @param numPlayers
+	 */
+	public ModelBase(int numPlayers) {
+		if(numPlayers == 0)numPlayers = 2;
 		this.boardSpaces = new Space[10][10];
-		playas = new Player[4];
+		playas = new Player[numPlayers];
 		for (int i = 0; i < 4; i++) {
 			this.playas[i] = new Player("Player" + (i + 1));
 		}
@@ -30,7 +43,7 @@ public abstract class ModelBase {
 		for (int idx = 0; idx < 27; idx++) {
 
 			for (int countLetters = 0; countLetters < lettersCounts[idx]; countLetters++) {
-				tileBag[bagIdx] = new BoardSpace(new Tile());
+				tileBag[++bagIdx] = new BagSpace(new Tile(lettersChar[idx],lettersValue[idx]));
 			}
 		}
 	}
