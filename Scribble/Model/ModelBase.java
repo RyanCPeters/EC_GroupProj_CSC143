@@ -30,7 +30,7 @@ public abstract class ModelBase {
 		for (int idx = 0; idx < 27; idx++) {
 
 			for (int countLetters = 0; countLetters < lettersCounts[idx]; countLetters++) {
-				tileBag[bagIdx] = new Space();
+				tileBag[bagIdx] = new BoardSpace(new Tile());
 			}
 		}
 	}

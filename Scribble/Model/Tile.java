@@ -19,17 +19,16 @@ public class Tile {
 	private JLabel ltrLabl;
 	private JLabel valLabl;
 
-	public Tile() {
-		this.letter = '~';
-		this.value = '!';
-		ltrLabl = new JLabel(String.valueOf(letter));
-		valLabl = new JLabel(String.valueOf(value));
+	public Tile() {// the empty contructor is only here to act as a stubb for testing purposes.
+		this('~', 99);
+
 	}
 
 	public Tile(char letter, int value) {
-		this();
 		this.letter = letter;
 		this.value = value;
+		ltrLabl = new JLabel(String.valueOf(letter));
+		valLabl = new JLabel(String.valueOf(value));
 	}
 }
 /* tile distribution cheat sheet.
