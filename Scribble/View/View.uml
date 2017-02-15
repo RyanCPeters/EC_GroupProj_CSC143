@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Scribble.View</OriginalElement>
+  <nodes>
+    <node x="0.0" y="148.0">Scribble.View.Board</node>
+    <node x="0.0" y="0.0">Scribble.View.Stubbs</node>
+    <node x="0.0" y="74.0">Scribble.View.Window</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="57.5" y="88.5" />
+  <SelectedNodes>
+    <node>Scribble.View.Board</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
