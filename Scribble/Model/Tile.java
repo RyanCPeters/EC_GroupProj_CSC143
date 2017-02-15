@@ -30,6 +30,18 @@ public class Tile {
 		ltrLabl = new JLabel(String.valueOf(letter));
 		valLabl = new JLabel(String.valueOf(value));
 	}
+
+	public char getLetter() {
+		return letter;
+	}
+
+	public int getValue() {
+		return value;
+	}
+
+	public FontMetrics getFm() {
+		return fm;
+	}
 }
 /* tile distribution cheat sheet.
 * letter    pts   count
