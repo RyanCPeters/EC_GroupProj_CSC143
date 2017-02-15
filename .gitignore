@@ -49,9 +49,9 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
-#!/Scribble/Model/Model.uml
-#Scribble/Controller/Controller.uml
+#!/Scribble/Model/Model_Package_Diagram.uml
+#Scribble/Controller/Controller_Package_Diagram.uml
 #Scribble/Controller/Stubbs/
-#Scribble/Model/Model.uml
+#Scribble/Model/Model_Package_Diagram.uml
 #Scribble/View/Stubbs/
-#Scribble/View/View.uml
+#Scribble/View/View_Package_Diagram.uml
