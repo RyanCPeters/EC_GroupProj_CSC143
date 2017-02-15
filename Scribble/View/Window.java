@@ -37,6 +37,9 @@ public class Window extends JFrame{
 	 */
 	public Window() throws HeadlessException {
 		setTitle("Scribble is not Scrabble!!");
+		// this will create a basic JOptionPane that asks the user to enter a string choosing the number
+		// of players they want in the game.
+		// ToDo: convert this JOptionPane to have 3 radio buttons that represent a choice of 2, 3, or 4 players.
 		String playerCount = JOptionPane.showInputDialog
 				("Enter the number of players from 2 to 4: ");
 		int numPlayers = Integer.parseInt(playerCount);
