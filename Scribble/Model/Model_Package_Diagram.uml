@@ -3,56 +3,70 @@
   <ID>JAVA</ID>
   <OriginalElement>Scribble.Model</OriginalElement>
   <nodes>
-    <node x="0.0" y="598.5">Scribble.Model.TraySpace</node>
-    <node x="567.0" y="441.0">Scribble.Model.Tile</node>
-    <node x="311.0" y="587.0">Scribble.Model.BoardSpace</node>
-    <node x="216.0" y="300.5">Scribble.Model.Stubbs</node>
-    <node x="40.75" y="0.0">Scribble.Model.ModelBase</node>
-    <node x="0.0" y="234.0">Scribble.Model.ModelBase.Player</node>
-    <node x="147.0" y="441.0">Scribble.Model.Space</node>
-    <node x="157.0" y="598.5">Scribble.Model.BagSpace</node>
+    <node x="0.0" y="289.5">Scribble.Model.Stubbs.ModelStubb</node>
+    <node x="281.0" y="300.5">Scribble.Model.PersistentBase</node>
+    <node x="0.0" y="498.50000000000006">Scribble.Model.TraySpace</node>
+    <node x="531.1666666666667" y="409.33333333333337">Scribble.Model.Tile</node>
+    <node x="149.0" y="300.5">Scribble.Model.TempTurnBase</node>
+    <node x="311.0" y="487.00000000000006">Scribble.Model.BoardSpace</node>
+    <node x="124.75" y="0.0">Scribble.Model.ModelBase</node>
+    <node x="147.0" y="341.00000000000006">Scribble.Model.Space</node>
+    <node x="408.0" y="234.0">Scribble.Model.ModelBase.Player</node>
+    <node x="157.0" y="498.50000000000006">Scribble.Model.BagSpace</node>
   </nodes>
   <notes />
   <edges>
     <edge source="Scribble.Model.BoardSpace" target="Scribble.Model.Space">
       <point x="0.0" y="-37.0" />
-      <point x="416.5" y="562.0" />
-      <point x="275.33333333333337" y="562.0" />
+      <point x="416.5" y="462.00000000000006" />
+      <point x="275.33333333333337" y="462.00000000000006" />
       <point x="51.33333333333337" y="48.0" />
     </edge>
     <edge source="Scribble.Model.BagSpace" target="Scribble.Model.Space">
       <point x="0.0" y="-25.5" />
       <point x="0.0" y="48.0" />
     </edge>
-    <edge source="Scribble.Model.Stubbs" target="Scribble.Model.ModelBase">
+    <edge source="Scribble.Model.PersistentBase" target="Scribble.Model.ModelBase">
       <point x="0.0" y="-14.5" />
-      <point x="273.5" y="209.0" />
-      <point x="258.25" y="209.0" />
-      <point x="72.5" y="92.0" />
+      <point x="334.5" y="209.0" />
+      <point x="306.0" y="209.0" />
+      <point x="36.25" y="92.0" />
+    </edge>
+    <edge source="Scribble.Model.Stubbs.ModelStubb" target="Scribble.Model.ModelBase">
+      <point x="0.0" y="-25.5" />
+      <point x="64.5" y="209.0" />
+      <point x="161.0" y="209.0" />
+      <point x="-108.75" y="92.0" />
+    </edge>
+    <edge source="Scribble.Model.TempTurnBase" target="Scribble.Model.ModelBase">
+      <point x="0.0" y="-14.5" />
+      <point x="205.0" y="209.0" />
+      <point x="233.5" y="209.0" />
+      <point x="-36.25" y="92.0" />
     </edge>
     <edge source="Scribble.Model.TraySpace" target="Scribble.Model.Space">
       <point x="0.0" y="-25.5" />
-      <point x="68.5" y="562.0" />
-      <point x="172.66666666666666" y="562.0" />
-      <point x="-51.33333333333334" y="48.0" />
+      <point x="68.5" y="462.00000000000006" />
+      <point x="172.66666666666669" y="462.00000000000006" />
+      <point x="-51.333333333333314" y="48.0" />
     </edge>
     <edge source="Scribble.Model.ModelBase.Player" target="Scribble.Model.ModelBase">
       <point x="0.0" y="-81.0" />
-      <point x="98.0" y="209.0" />
-      <point x="113.25" y="209.0" />
-      <point x="-72.5" y="92.0" />
+      <point x="506.0" y="209.0" />
+      <point x="378.5" y="209.0" />
+      <point x="108.75" y="92.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="179.0" y="331.0" />
+  <settings layout="Hierarchic Group" zoom="1.5" x="474.83333333333303" y="293.3333333333335" />
   <SelectedNodes>
-    <node>Scribble.Model.BagSpace</node>
+    <node>Scribble.Model.Tile</node>
   </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
-    <Category>Constructors</Category>
-    <Category>Methods</Category>
-    <Category>Properties</Category>
     <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
