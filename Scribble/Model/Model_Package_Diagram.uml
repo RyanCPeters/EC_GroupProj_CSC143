@@ -3,64 +3,104 @@
   <ID>JAVA</ID>
   <OriginalElement>Scribble.Model</OriginalElement>
   <nodes>
-    <node x="0.0" y="289.5">Scribble.Model.Stubbs.ModelStubb</node>
-    <node x="281.0" y="300.5">Scribble.Model.PersistentBase</node>
-    <node x="0.0" y="498.50000000000006">Scribble.Model.TraySpace</node>
-    <node x="531.1666666666667" y="409.33333333333337">Scribble.Model.Tile</node>
-    <node x="149.0" y="300.5">Scribble.Model.TempTurnBase</node>
-    <node x="311.0" y="487.00000000000006">Scribble.Model.BoardSpace</node>
-    <node x="124.75" y="0.0">Scribble.Model.ModelBase</node>
-    <node x="147.0" y="341.00000000000006">Scribble.Model.Space</node>
-    <node x="408.0" y="234.0">Scribble.Model.ModelBase.Player</node>
-    <node x="157.0" y="498.50000000000006">Scribble.Model.BagSpace</node>
+    <node x="550.3630952380952" y="1033.0">Scribble.Model.PersistentBase</node>
+    <node x="677.3630952380952" y="1022.0">Scribble.Model.Stubbs.ModelStubb</node>
+    <node x="421.5" y="446.5">Scribble.Model.TraySpace</node>
+    <node x="250.7089002267573" y="149.5589569160998">Scribble.Model.Tile</node>
+    <node x="418.36309523809524" y="1033.0">Scribble.Model.TempTurnBase</node>
+    <node x="190.5" y="435.0">Scribble.Model.BoardSpace</node>
+    <node x="386.19642857142856" y="633.0">Scribble.Model.ModelBase</node>
+    <node x="578.5" y="391.0">Scribble.Model.ModelBase.Player</node>
+    <node x="558.8392857142858" y="235.0">Scribble.Model.Space</node>
+    <node x="36.5" y="446.5">Scribble.Model.BagSpace</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="Scribble.Model.BoardSpace" target="Scribble.Model.Space">
-      <point x="0.0" y="-37.0" />
-      <point x="416.5" y="462.00000000000006" />
-      <point x="275.33333333333337" y="462.00000000000006" />
-      <point x="51.33333333333337" y="48.0" />
+    <edge source="Scribble.Model.ModelBase" target="Scribble.Model.Tile">
+      <point x="-184.28571428571428" y="-169.5" />
+      <point x="416.9107142857143" y="613.0" />
+      <point x="26.0" y="613.0" />
+      <point x="26.0" y="210.0" />
+      <point x="315.2627551020408" y="210.0" />
+      <point x="-60.25" y="92.5" />
     </edge>
-    <edge source="Scribble.Model.BagSpace" target="Scribble.Model.Space">
-      <point x="0.0" y="-25.5" />
+    <edge source="Scribble.Model.ModelBase.Player" target="Scribble.Model.Space">
+      <point x="-49.0" y="-81.0" />
+      <point x="627.5" y="371.0" />
+      <point x="635.8392857142858" y="371.0" />
       <point x="0.0" y="48.0" />
     </edge>
-    <edge source="Scribble.Model.PersistentBase" target="Scribble.Model.ModelBase">
-      <point x="0.0" y="-14.5" />
-      <point x="334.5" y="209.0" />
-      <point x="306.0" y="209.0" />
-      <point x="36.25" y="92.0" />
+    <edge source="Scribble.Model.BoardSpace" target="Scribble.Model.Space">
+      <point x="0.0" y="-37.0" />
+      <point x="296.0" y="361.0" />
+      <point x="591.8392857142858" y="361.0" />
+      <point x="-44.0" y="48.0" />
     </edge>
     <edge source="Scribble.Model.Stubbs.ModelStubb" target="Scribble.Model.ModelBase">
       <point x="0.0" y="-25.5" />
-      <point x="64.5" y="209.0" />
-      <point x="161.0" y="209.0" />
-      <point x="-108.75" y="92.0" />
+      <point x="741.8630952380952" y="997.0" />
+      <point x="744.5297619047619" y="997.0" />
+      <point x="143.33333333333337" y="169.5" />
     </edge>
-    <edge source="Scribble.Model.TempTurnBase" target="Scribble.Model.ModelBase">
-      <point x="0.0" y="-14.5" />
-      <point x="205.0" y="209.0" />
-      <point x="233.5" y="209.0" />
-      <point x="-36.25" y="92.0" />
+    <edge source="Scribble.Model.Space" target="Scribble.Model.Tile">
+      <point x="0.0" y="-48.0" />
+      <point x="635.8392857142858" y="210.0" />
+      <point x="435.7627551020408" y="210.0" />
+      <point x="60.25" y="92.5" />
     </edge>
     <edge source="Scribble.Model.TraySpace" target="Scribble.Model.Space">
       <point x="0.0" y="-25.5" />
-      <point x="68.5" y="462.00000000000006" />
-      <point x="172.66666666666669" y="462.00000000000006" />
-      <point x="-51.333333333333314" y="48.0" />
+      <point x="490.0" y="371.0" />
+      <point x="613.8392857142858" y="371.0" />
+      <point x="-22.0" y="48.0" />
+    </edge>
+    <edge source="Scribble.Model.ModelBase" target="Scribble.Model.BagSpace">
+      <point x="-122.85714285714283" y="-169.5" />
+      <point x="478.3392857142857" y="603.0" />
+      <point x="103.5" y="603.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="Scribble.Model.BagSpace" target="Scribble.Model.Space">
+      <point x="0.0" y="-25.5" />
+      <point x="103.5" y="351.0" />
+      <point x="569.8392857142858" y="351.0" />
+      <point x="-66.0" y="48.0" />
+    </edge>
+    <edge source="Scribble.Model.PersistentBase" target="Scribble.Model.ModelBase">
+      <point x="0.0" y="-14.5" />
+      <point x="603.8630952380952" y="997.0" />
+      <point x="601.1964285714286" y="997.0" />
+      <point x="0.0" y="169.5" />
+    </edge>
+    <edge source="Scribble.Model.ModelBase" target="Scribble.Model.ModelBase.Player">
+      <point x="0.0" y="-169.5" />
+      <point x="601.1964285714286" y="583.0" />
+      <point x="676.5" y="583.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="Scribble.Model.TempTurnBase" target="Scribble.Model.ModelBase">
+      <point x="0.0" y="-14.5" />
+      <point x="474.36309523809524" y="997.0" />
+      <point x="457.8630952380952" y="997.0" />
+      <point x="-143.33333333333337" y="169.5" />
+    </edge>
+    <edge source="Scribble.Model.ModelBase" target="Scribble.Model.Space">
+      <point x="184.28571428571433" y="-169.5" />
+      <point x="785.4821428571429" y="613.0" />
+      <point x="796.0" y="613.0" />
+      <point x="796.0" y="351.0" />
+      <point x="701.8392857142858" y="351.0" />
+      <point x="66.0" y="48.0" />
     </edge>
     <edge source="Scribble.Model.ModelBase.Player" target="Scribble.Model.ModelBase">
-      <point x="0.0" y="-81.0" />
-      <point x="506.0" y="209.0" />
-      <point x="378.5" y="209.0" />
-      <point x="108.75" y="92.0" />
+      <point x="65.33333333333326" y="81.0" />
+      <point x="741.8333333333333" y="593.0" />
+      <point x="662.625" y="593.0" />
+      <point x="61.428571428571445" y="-169.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.5" x="474.83333333333303" y="293.3333333333335" />
-  <SelectedNodes>
-    <node>Scribble.Model.Tile</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="0.9293993677555321" x="408.9926303854876" y="608.5" />
+  <SelectedNodes />
   <Categories>
     <Category>Fields</Category>
     <Category>Inner Classes</Category>

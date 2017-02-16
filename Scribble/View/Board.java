@@ -7,4 +7,5 @@ import javax.swing.*;
  * @date 2/12/2017
  */
 public class Board extends JPanel{
+
 }

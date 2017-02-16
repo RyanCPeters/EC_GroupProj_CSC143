@@ -1,11 +1,14 @@
 package Scribble.Model;
 
+import java.util.Observable;
+import java.util.Observer;
+
 /**Our model base will be where we handle the instantiation and access rights with regards to the arrays of space and
  * tile objects.
  * @author Ryan Peters
  * @date 2/12/2017
  */
-public abstract class ModelBase {
+public abstract class ModelBase extends Observable{
 	private Space[][] boardSpaces;
 	Player[] playas; // constructed iteratively with the help of the view and controller.
 	Space[] tileBag; // this array will be populated by the controller but it should be instantiated by ModelBase.
@@ -18,6 +21,8 @@ public abstract class ModelBase {
 	public ModelBase(){
 		this(0);
 	}
+
+
 
 	/**we can use the empty contstructor to set up a stubb-version of the model.
 	 *
@@ -53,6 +58,109 @@ public abstract class ModelBase {
 		this.playas = playas;
 		this.tileBag = tileBag;
 		this.activeTileTray = activeTileTray;
+	}
+
+	/**
+	 * Adds an observer to the set of observers for this object, provided
+	 * that it is not the same as some observer already in the set.
+	 * The order in which notifications will be delivered to multiple
+	 * observers is not specified. See the class comment.
+	 *
+	 * @param o an observer to be added.
+	 * @throws NullPointerException if the parameter o is null.
+	 */
+	@Override
+	public synchronized void addObserver(Observer o) {
+		super.addObserver(o);
+	}
+
+	/**
+	 * If this object has changed, as indicated by the
+	 * <code>hasChanged</code> method, then notify all of its observers
+	 * and then call the <code>clearChanged</code> method to
+	 * indicate that this object has no longer changed.
+	 * <p>
+	 * Each observer has its <code>update</code> method called with two
+	 * arguments: this observable object and <code>null</code>. In other
+	 * words, this method is equivalent to:
+	 * <blockquote><tt>
+	 * notifyObservers(null)</tt></blockquote>
+	 *
+	 * @see Observable#clearChanged()
+	 * @see Observable#hasChanged()
+	 * @see Observer#update(Observable, Object)
+	 */
+	@Override
+	public void notifyObservers() {
+		super.notifyObservers();
+	}
+
+	/**
+	 * If this object has changed, as indicated by the
+	 * <code>hasChanged</code> method, then notify all of its observers
+	 * and then call the <code>clearChanged</code> method to indicate
+	 * that this object has no longer changed.
+	 * <p>
+	 * Each observer has its <code>update</code> method called with two
+	 * arguments: this observable object and the <code>arg</code> argument.
+	 *
+	 * @param arg any object.
+	 * @see Observable#clearChanged()
+	 * @see Observable#hasChanged()
+	 * @see Observer#update(Observable, Object)
+	 */
+	@Override
+	public void notifyObservers(Object arg) {
+		super.notifyObservers(arg);
+	}
+
+	/**
+	 * Marks this <tt>Observable</tt> object as having been changed; the
+	 * <tt>hasChanged</tt> method will now return <tt>true</tt>.
+	 */
+	@Override
+	protected synchronized void setChanged() {
+		super.setChanged();
+	}
+
+	/**
+	 * Indicates that this object has no longer changed, or that it has
+	 * already notified all of its observers of its most recent change,
+	 * so that the <tt>hasChanged</tt> method will now return <tt>false</tt>.
+	 * This method is called automatically by the
+	 * <code>notifyObservers</code> methods.
+	 *
+	 * @see Observable#notifyObservers()
+	 * @see Observable#notifyObservers(Object)
+	 */
+	@Override
+	protected synchronized void clearChanged() {
+		super.clearChanged();
+	}
+
+	/**
+	 * Tests if this object has changed.
+	 *
+	 * @return <code>true</code> if and only if the <code>setChanged</code>
+	 * method has been called more recently than the
+	 * <code>clearChanged</code> method on this object;
+	 * <code>false</code> otherwise.
+	 * @see Observable#clearChanged()
+	 * @see Observable#setChanged()
+	 */
+	@Override
+	public synchronized boolean hasChanged() {
+		return super.hasChanged();
+	}
+
+	/**
+	 * Returns the number of observers of this <tt>Observable</tt> object.
+	 *
+	 * @return the number of observers of this object.
+	 */
+	@Override
+	public synchronized int countObservers() {
+		return super.countObservers();
 	}
 
 	/**
