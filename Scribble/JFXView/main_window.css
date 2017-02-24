@@ -1,7 +1,30 @@
 /*
 This file will specify any formatting we wish to do - changing fonts, changing the size and color of text, and so on.
+If we don't like the look of something, we can change it here.
 */
 
+.root {
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-base: rgb(65, 65, 65);
+    -fx-background: rgb(60, 60, 60);
+    -fx-accent: #4093ce
+}
+
+.menu-item .label {
+    -fx-text-fill: #202020
+}
+
 #scores-title-text {
-    -fx-font-size: 23px
+    -fx-font-size: 30px;
+    -fx-fill: grey
+}
+
+#player-text {
+    -fx-font-size: 23px;
+    -fx-fill: lightgrey;
+}
+
+#scores-text {
+    -fx-font-size: 23px;
+    -fx-fill: lightgrey;
 }

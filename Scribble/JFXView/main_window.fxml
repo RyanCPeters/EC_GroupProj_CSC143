@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<?import java.net.URL?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<BorderPane prefHeight="900" prefWidth="1100" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scribble.JFXView.MainWindowController">
+<BorderPane prefHeight="985" prefWidth="1200" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scribble.JFXView.MainWindowController">
     <top>
         <MenuBar fx:id="menuBar" onKeyPressed="#handleKeyboardInput">
-            <menus>
-                <Menu text="File">
-                    <items>
-                        <MenuItem text="test" />
-                    </items>
-                </Menu>
-            </menus>
+            <Menu text="File">
+                <MenuItem fx:id="resetBoard" text="Reset board" onAction="#resetBoard"/>
+                <MenuItem text="foo" />
+            </Menu>
+            <Menu text="Settings">
+                <MenuItem text="bar" />
+                <MenuItem text="baz" />
+                <MenuItem text="quux" />
+
+            </Menu>
         </MenuBar>
     </top>
+
     <left>
         <BorderPane prefHeight="800" prefWidth="800" xmlns:fx="http://javafx.com/fxml">
             <center>
@@ -30,25 +35,41 @@
             </center>
         </BorderPane>
     </left>
-   <right>
-      <VBox prefHeight="800" prefWidth="150.0">
-          <padding><Insets top="10" bottom="10"/></padding>
-          <Text text="Scores:" id="scores-title-text"/>
-          <GridPane prefHeight="200.0" prefWidth="100.0" alignment="TOP_CENTER" hgap="5" xmlns:fx="http://javafx.com/fxml">
-              <Label fx:id="player1" id="player-text" text="Player 1:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-              <Label fx:id="player2" id="player-text" text="Player 2:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-              <Label fx:id="player3" id="player-text" text="Player 3:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-              <Label fx:id="player4" id="player-text" text="Player 4:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
 
-              <Label fx:id="player1Score" id="scores-text" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-              <Label fx:id="player2Score" id="scores-text" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-              <Label fx:id="player3Score" id="scores-text" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-              <Label fx:id="player4Score" id="scores-text" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-          </GridPane>
-      </VBox>
-   </right>
+    <right>
+        <VBox prefHeight="600" prefWidth="290">
+            <padding><Insets top="10" /></padding>
+            <Text id="scores-title-text" text="Scores:"/>
+            <GridPane alignment="TOP_CENTER" hgap="10" prefHeight="300.0" prefWidth="290" xmlns:fx="http://javafx.com/fxml">
+                <Text id="player-text" fx:id="player1" text="Player 1:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Text id="player-text" fx:id="player2" text="Player 2:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Text id="player-text" fx:id="player3" text="Player 3:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Text id="player-text" fx:id="player4" text="Player 4:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+                <Text id="scores-text" fx:id="player1Score" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Text id="scores-text" fx:id="player2Score" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Text id="scores-text" fx:id="player3Score" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Text id="scores-text" fx:id="player4Score" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            </GridPane>
+            <GridPane alignment="BOTTOM_CENTER" hgap="10" vgap="10" prefHeight="300" prefWidth="290" xmlns:fx="http://javafx.com/fxml" >
+                <padding><Insets right="10" /></padding>
+                <Button text="Finish Turn" onAction="#finishTurnButtonAction" GridPane.columnIndex="0" GridPane.rowIndex="0" minWidth="143"/>
+                <Button text="Reset Turn" onAction="#resetTurnButtonAction" GridPane.columnIndex="1" GridPane.rowIndex="0" minWidth="121"/>
+                <Button text="Randomize Letters" fx:id="randomizeLetters" onAction="#randomizeLettersButtonAction" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Button text="Replace Letters" fx:id="replaceLetters" onAction="#replaceLettersButtonAction" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button text="Challenge!" onAction="#challengeButtonAction" GridPane.columnIndex="0" GridPane.rowIndex="2" minWidth="143"/>
+                <Button text="Accept" onAction="#acceptButtonAction" GridPane.columnIndex="1" GridPane.rowIndex="2" minWidth="121"/>
+            </GridPane>
+        </VBox>
+    </right>
+
+    <bottom>
+        <HBox prefHeight="80" prefWidth="Infinity" alignment="CENTER">
+            <Text text="tile tray will go here"/>
+        </HBox>
+    </bottom>
 
     <stylesheets>
-        <URL value="@main_window.css"/>
+        <URL value="@main_window.css" />
     </stylesheets>
 </BorderPane>

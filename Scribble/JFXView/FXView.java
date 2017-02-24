@@ -1,5 +1,6 @@
-package Scribble.JFXView;/**
- * @author Ryan Peters
+package Scribble.JFXView;
+/**
+ * @author Ryan Peters, Peter Schinske
  * @date 2/13/2017
  */
 
@@ -19,7 +20,7 @@ public class FXView extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		Parent root = FXMLLoader.load(getClass().getResource("main_window.fxml"));
 
-		primaryStage.setScene(new Scene(root, 1100, 985));
+		primaryStage.setScene(new Scene(root, 1200, 985));
 		primaryStage.setTitle("Scribble");
 		primaryStage.setResizable(false);
 		primaryStage.show();
