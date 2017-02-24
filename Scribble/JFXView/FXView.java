@@ -4,6 +4,9 @@ package Scribble.JFXView;/**
  */
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class FXView extends Application {
@@ -13,7 +16,12 @@ public class FXView extends Application {
 	}
 
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) throws Exception {
+		Parent root = FXMLLoader.load(getClass().getResource("main_window.fxml"));
 
+		primaryStage.setScene(new Scene(root, 1100, 985));
+		primaryStage.setTitle("Scribble");
+		primaryStage.setResizable(false);
+		primaryStage.show();
 	}
 }

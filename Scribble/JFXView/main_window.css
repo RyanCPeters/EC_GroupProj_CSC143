@@ -1,0 +1,7 @@
+/*
+This file will specify any formatting we wish to do - changing fonts, changing the size and color of text, and so on.
+*/
+
+#scores-title-text {
+    -fx-font-size: 23px
+}
