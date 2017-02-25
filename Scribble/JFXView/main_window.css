@@ -7,7 +7,7 @@ If we don't like the look of something, we can change it here.
     -fx-text-fill: rgb(255, 255, 255);
     -fx-base: rgb(65, 65, 65);
     -fx-background: rgb(60, 60, 60);
-    -fx-accent: #4093ce
+    -fx-accent: #4083b2
 }
 
 .menu-item .label {
@@ -20,11 +20,11 @@ If we don't like the look of something, we can change it here.
 }
 
 #player-text {
-    -fx-font-size: 23px;
+    -fx-font-size: 20px;
     -fx-fill: lightgrey;
 }
 
 #scores-text {
-    -fx-font-size: 23px;
+    -fx-font-size: 20px;
     -fx-fill: lightgrey;
 }
