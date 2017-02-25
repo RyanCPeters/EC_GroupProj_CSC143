@@ -28,7 +28,6 @@ stuff is also done here.
                 <MenuItem text="foo" />
                 <MenuItem text="bar" />
                 <MenuItem text="baz" />
-
             </Menu>
         </MenuBar>
     </top>
@@ -57,7 +56,7 @@ stuff is also done here.
                 <Text id="scores-text" fx:id="player4Score" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             </GridPane>
             <!--
-            This is the old grid layout for a 2-collumn button setup
+            This is the old grid layout for a 2-column button setup
 
             <GridPane alignment="BOTTOM_CENTER" hgap="10" vgap="10" prefHeight="300" prefWidth="290" xmlns:fx="http://javafx.com/fxml" >
                 <padding><Insets right="10" /></padding>
