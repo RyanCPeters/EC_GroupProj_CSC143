@@ -24,8 +24,6 @@ public class MainWindowController {
     @FXML private MenuItem resetBoard;
     @FXML private MenuItem exit;
 
-    private int numOfPlayers = -1;
-
     @FXML private Text player1;
     @FXML private Text player2;
     @FXML private Text player3;
@@ -141,7 +139,6 @@ public class MainWindowController {
             case 1:
                 player1.setText(names[0]);
         }
-        numOfPlayers = names.length;
     }
 
     /**
