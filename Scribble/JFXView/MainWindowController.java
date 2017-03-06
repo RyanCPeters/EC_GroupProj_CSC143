@@ -8,6 +8,8 @@ import javafx.scene.input.InputEvent;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
 import javafx.scene.input.KeyCombination;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
 /**
@@ -33,6 +35,18 @@ public class MainWindowController {
     @FXML private Text player2Score;
     @FXML private Text player3Score;
     @FXML private Text player4Score;
+
+    @FXML private GridPane board;
+    @FXML private GridPane tileTray;
+
+    /** The board is this many tiles accross */
+    private int boardWidth = 15;
+
+    /** The board is this many tiles high */
+    private int boardHeight = 15;
+
+    /** The tile tray is this many tiles wide */
+    private int tileTrayWidth = 10;
 
     /**
      * Handles keyboard input (in case we ever want to add keyboard shortcuts).
@@ -181,6 +195,14 @@ public class MainWindowController {
         player4Score.setText("" + score);
     }
 
+    void setBoardWidth(int boardWidth) {
+        this.boardWidth = boardWidth;
+    }
+
+    void setBoardHeight(int boardHeight) {
+        this.boardHeight = boardHeight;
+    }
+
     /**
      * Called when the GUI is created. If we need to do something special to anything in the GUI, we do it in here.
      */
@@ -189,6 +211,21 @@ public class MainWindowController {
         //Gives the "reset board" menu option the shortcut of ctrl+r
         resetBoard.setAccelerator(new KeyCodeCombination(KeyCode.R,  KeyCombination.CONTROL_DOWN));
         exit.setAccelerator(new KeyCodeCombination(KeyCode.F4, KeyCombination.ALT_DOWN));
+        for (int x = 0; x < boardWidth; x++) {
+            for (int y = 0; y < boardHeight; y++) {
+                board.add(new FXSpace(), x, y);
+            }
+        }
+        board.setMaxWidth(FXSpace.WIDTH * boardWidth);
+        board.setMaxHeight(FXSpace.HEIGHT * boardHeight);
+        board.setBorder(new Border(new BorderStroke(Color.LIGHTGREY, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(1))));
+
+        for (int x = 0; x < tileTrayWidth; x++) {
+            tileTray.add(new FXSpace(), x, 0);
+        }
+        tileTray.setMaxWidth(FXSpace.WIDTH * tileTrayWidth);
+        tileTray.setMaxHeight(FXSpace.HEIGHT * 1);
+        tileTray.setBorder(new Border(new BorderStroke(Color.LIGHTGREY, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(1))));
     }
 
 }

@@ -27,8 +27,9 @@ public class FXView extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {
 	    //Tell javafx to use the main_window.fxml file
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("main_window.fxml"));
+
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("main_window.fxml"));
+		loader.setClassLoader(getClass().getClassLoader());
 		Parent root = loader.load();
 
 		controller = loader.getController();
@@ -86,4 +87,12 @@ public class FXView extends Application {
     public static void setPlayer4Score(int score) {
 	    controller.setPlayer4Score(score);
     }
+
+    public static void setBoardWidth(int boardWidth) {
+    	controller.setBoardWidth(boardWidth);
+	}
+
+	public static void setBoardHeight(int boardHeight) {
+    	controller.setBoardHeight(boardHeight);
+	}
 }

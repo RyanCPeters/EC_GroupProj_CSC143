@@ -5,18 +5,18 @@ If we don't like the look of something, we can change it here.
 
 .root {
     -fx-text-fill: rgb(255, 255, 255);
-    -fx-base: rgb(65, 65, 65);
-    -fx-background: rgb(60, 60, 60);
-    -fx-accent: #4083b2
+    -fx-base: rgb(117, 86, 58);
+    -fx-background: rgb(155, 135, 115);
+    -fx-accent: #4083b2;
 }
 
 .menu-item .label {
-    -fx-text-fill: #202020
+    -fx-text-fill: #202020;
 }
 
 #scores-title-text {
     -fx-font-size: 30px;
-    -fx-fill: grey
+    -fx-fill: grey;
 }
 
 #player-text {
@@ -27,4 +27,23 @@ If we don't like the look of something, we can change it here.
 #scores-text {
     -fx-font-size: 20px;
     -fx-fill: lightgrey;
+}
+
+#distribution-title-text {
+    -fx-font-size: 24px;
+    -fx-fill: grey;
+}
+
+#letter-text {
+    -fx-font-size: 18px;
+    -fx-fill: lightgrey;
+}
+
+#letter-freq {
+    -fx-font-size: 18px;
+    -fx-fill: lightgrey;
+}
+
+FXSpace {
+    -fx-skin: "Scribble.JFXView.FXSpaceSkin";
 }
