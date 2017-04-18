@@ -14,6 +14,9 @@ import javafx.stage.Stage;
  */
 public class FXView extends Application {
 
+	/** True if this GUI is the one that is being used. */
+	private static boolean hasStarted = false;
+
     private static MainWindowController controller;
 
 	public static void main(String[] args) {
@@ -27,7 +30,6 @@ public class FXView extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {
 	    //Tell javafx to use the main_window.fxml file
-
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("main_window.fxml"));
 		loader.setClassLoader(getClass().getClassLoader());
 		Parent root = loader.load();
@@ -38,6 +40,8 @@ public class FXView extends Application {
 		stage.setTitle("Scribble");
 		stage.setResizable(false);
 		stage.show();
+
+		hasStarted = true;
 
 		//Test code
 		String[] names = {"Billy", "Veronica", "José", "Trista"};
@@ -53,7 +57,8 @@ public class FXView extends Application {
      * @param names an array of the player names ({@code names[0]} is player1, {@code names[1]} is player2, etc.
      */
 	public static void setPlayerNames(String[] names) {
-	    controller.setPlayerNames(names);
+		if (hasStarted)
+	    	controller.setPlayerNames(names);
     }
 
     /**
@@ -61,7 +66,8 @@ public class FXView extends Application {
      * @param score the score of {@code player1}.
      */
     public static void setPlayer1Score(int score) {
-	    controller.setPlayer1Score(score);
+	    if (hasStarted)
+			controller.setPlayer1Score(score);
     }
 
     /**
@@ -69,7 +75,8 @@ public class FXView extends Application {
      * @param score the score of {@code player2}.
      */
     public static void setPlayer2Score(int score) {
-	    controller.setPlayer2Score(score);
+	    if (hasStarted)
+    		controller.setPlayer2Score(score);
     }
 
     /**
@@ -77,7 +84,8 @@ public class FXView extends Application {
      * @param score the score of {@code player3}.
      */
     public static void setPlayer3Score(int score) {
-	    controller.setPlayer3Score(score);
+	    if (hasStarted)
+    		controller.setPlayer3Score(score);
     }
 
     /**
@@ -85,14 +93,25 @@ public class FXView extends Application {
      * @param score the score of {@code player4}.
      */
     public static void setPlayer4Score(int score) {
-	    controller.setPlayer4Score(score);
+	    if (hasStarted)
+    		controller.setPlayer4Score(score);
     }
 
+    /**
+     * Sets the width, in cells, of the playing board - default is 15.
+     * @param boardWidth the new width of the board
+     */
     public static void setBoardWidth(int boardWidth) {
-    	controller.setBoardWidth(boardWidth);
+    	if (hasStarted)
+    		controller.setBoardWidth(boardWidth);
 	}
 
+    /**
+     * Sets the height, in cells, of the playing board - default is 15.
+     * @param boardHeight the new height of the board.
+     */
 	public static void setBoardHeight(int boardHeight) {
-    	controller.setBoardHeight(boardHeight);
+		if (hasStarted)
+			controller.setBoardHeight(boardHeight);
 	}
 }
