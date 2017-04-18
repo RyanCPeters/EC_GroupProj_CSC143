@@ -8,7 +8,7 @@ import java.util.Observer;
  * @author Ryan Peters
  * @date 2/12/2017
  */
-public abstract class ModelBase extends Observable{
+public abstract class ModelBase extends Observable {
 	private Space[][] boardSpaces;
 	Player[] playas; // constructed iteratively with the help of the view and controller.
 	Space[] tileBag; // this array will be populated by the controller but it should be instantiated by ModelBase.

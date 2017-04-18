@@ -3,10 +3,19 @@ This file will specify any formatting we wish to do - changing fonts, changing t
 If we don't like the look of something, we can change it here.
 */
 
+/*
 .root {
     -fx-text-fill: rgb(255, 255, 255);
     -fx-base: rgb(117, 86, 58);
     -fx-background: rgb(155, 135, 115);
+    -fx-accent: #4083b2;
+}
+*/
+
+.root {
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-base: rgb(56, 117, 88);         /* kinda a lighter blue thing */
+    -fx-background: rgb(57, 91, 91);    /* slate blue */
     -fx-accent: #4083b2;
 }
 

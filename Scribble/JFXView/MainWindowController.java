@@ -1,5 +1,6 @@
 package Scribble.JFXView;
 
+import Scribble.Controller.ViewControllers.ButtonController;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -77,7 +78,7 @@ public class MainWindowController {
      */
     @FXML
     public void finishTurnButtonAction(ActionEvent event) {
-
+        ButtonController.finishTurnButtonAction();
     }
 
     /**
@@ -85,7 +86,7 @@ public class MainWindowController {
      */
     @FXML
     public void resetTurnButtonAction(ActionEvent event) {
-
+        ButtonController.resetTurnButtonAction();
     }
 
     /**
@@ -93,7 +94,7 @@ public class MainWindowController {
      */
     @FXML
     public void randomizeLettersButtonAction(ActionEvent event) {
-
+        ButtonController.randomizeLettersButtonAction();
     }
 
     /**
@@ -101,15 +102,15 @@ public class MainWindowController {
      */
     @FXML
     public void replaceLettersButtonAction(ActionEvent event) {
-
+        ButtonController.replaceLettersButtonAction();
     }
 
     /**
-     * This method gets called when the "Challenge!" button is pressed.
+     * This method gets called when the "Replace Letters" button is pressed.
      */
     @FXML
     public void challengeButtonAction(ActionEvent event) {
-
+        ButtonController.challengeButtonAction();
     }
 
     /**
@@ -117,7 +118,7 @@ public class MainWindowController {
      */
     @FXML
     public void acceptButtonAction(ActionEvent event) {
-
+        ButtonController.acceptButtonAction();
     }
 
     /**
