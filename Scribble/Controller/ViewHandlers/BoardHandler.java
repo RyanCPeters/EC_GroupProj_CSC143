@@ -1,4 +1,4 @@
-package Scribble.Controller.ViewControllers;
+package Scribble.Controller.ViewHandlers;
 
 import Scribble.JFXView.FXView;
 
@@ -7,7 +7,7 @@ import Scribble.JFXView.FXView;
  * The default size is 15x15.
  * @author Peter Schinske
  */
-public class BoardController {
+public class BoardHandler {
 
     /**
      * Sets the width, in cells, of the playing board - default is 15.

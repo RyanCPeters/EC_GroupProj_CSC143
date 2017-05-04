@@ -1,6 +1,6 @@
 package Scribble.JFXView;
 
-import Scribble.Controller.ViewControllers.ButtonController;
+import Scribble.Controller.ViewHandlers.ButtonHandler;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -78,7 +78,7 @@ public class MainWindowController {
      */
     @FXML
     public void finishTurnButtonAction(ActionEvent event) {
-        ButtonController.finishTurnButtonAction();
+        ButtonHandler.finishTurnButtonAction();
     }
 
     /**
@@ -86,7 +86,7 @@ public class MainWindowController {
      */
     @FXML
     public void resetTurnButtonAction(ActionEvent event) {
-        ButtonController.resetTurnButtonAction();
+        ButtonHandler.resetTurnButtonAction();
     }
 
     /**
@@ -94,7 +94,7 @@ public class MainWindowController {
      */
     @FXML
     public void randomizeLettersButtonAction(ActionEvent event) {
-        ButtonController.randomizeLettersButtonAction();
+        ButtonHandler.randomizeLettersButtonAction();
     }
 
     /**
@@ -102,7 +102,7 @@ public class MainWindowController {
      */
     @FXML
     public void replaceLettersButtonAction(ActionEvent event) {
-        ButtonController.replaceLettersButtonAction();
+        ButtonHandler.replaceLettersButtonAction();
     }
 
     /**
@@ -110,7 +110,7 @@ public class MainWindowController {
      */
     @FXML
     public void challengeButtonAction(ActionEvent event) {
-        ButtonController.challengeButtonAction();
+        ButtonHandler.challengeButtonAction();
     }
 
     /**
@@ -118,7 +118,7 @@ public class MainWindowController {
      */
     @FXML
     public void acceptButtonAction(ActionEvent event) {
-        ButtonController.acceptButtonAction();
+        ButtonHandler.acceptButtonAction();
     }
 
     /**

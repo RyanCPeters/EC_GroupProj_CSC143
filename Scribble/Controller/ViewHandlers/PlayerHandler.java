@@ -1,4 +1,4 @@
-package Scribble.Controller.ViewControllers;
+package Scribble.Controller.ViewHandlers;
 
 import Scribble.JFXView.FXView;
 
@@ -7,7 +7,7 @@ import Scribble.JFXView.FXView;
  * as it is displayed on the gui(s). These methods will tell all views to change the player data.
  * @author Peter Schinske
  */
-public class PlayerController {
+public class PlayerHandler {
 
     /**
      Sets the player names and, if there are less than 4 people, hide the ones that aren't there.

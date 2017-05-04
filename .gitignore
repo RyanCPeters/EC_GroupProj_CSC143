@@ -13,6 +13,7 @@ gen### JetBrains template
 # User-specific stuff:
 .idea/workspace.xml
 .idea/tasks.xml
+tasks # a linux thing, don't worry about it --Peter
 
 # Sensitive or high-churn files:
 .idea/dataSources/

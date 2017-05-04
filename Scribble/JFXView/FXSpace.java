@@ -15,8 +15,8 @@ import javafx.scene.paint.Color;
  */
 public class FXSpace extends Control {
 
-    public static final int WIDTH = 51;
-    public static final int HEIGHT = 51;
+    public static final int WIDTH = 52;
+    public static final int HEIGHT = 52;
 
     private Space space;
 
@@ -25,8 +25,8 @@ public class FXSpace extends Control {
         setMinHeight(HEIGHT);
         setPrefHeight(HEIGHT);
         setMaxHeight(HEIGHT);
-        setMinWidth(HEIGHT);
-        setPrefWidth(HEIGHT);
+        setMinWidth(WIDTH);
+        setPrefWidth(WIDTH);
         setMaxWidth(WIDTH);
         setBorder(new Border(new BorderStroke(Color.LIGHTGREY, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(1))));
         this.space = space;

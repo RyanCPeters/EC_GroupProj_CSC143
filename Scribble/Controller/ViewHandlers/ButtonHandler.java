@@ -1,10 +1,10 @@
-package Scribble.Controller.ViewControllers;
+package Scribble.Controller.ViewHandlers;
 
 /**
  * The methods in this class will be called by the views when the various buttons are pressed.
  * @author Peter Schinske
  */
-public class ButtonController {
+public class ButtonHandler {
 
     /**
      * This method gets called when the "Finish Turn" button is pressed.
